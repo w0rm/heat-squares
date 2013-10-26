@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    curb (0.8.5)
     daemons (1.1.9)
     eventmachine (1.0.3)
     faraday (0.8.8)
@@ -35,6 +36,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  curb
   foursquare2
   json
   mocha
