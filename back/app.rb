@@ -7,6 +7,10 @@ class HeatSquares::App < Sinatra::Base
   set :sessions, true
   set :public_folder, "public"
 
+  get "/" do
+    redirect "/index.html"
+  end
+
   get "/data" do
     content_type :json
 
