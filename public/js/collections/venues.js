@@ -4,6 +4,9 @@ define( ['backbone', 'models/venue', 'underscore', 'config']
   return Backbone.Collection.extend({
     model: Venue
   , url: config.dataUrl
+  , parse: function (data) {
+      return data.spots
+    }
   , getPoints: function () {
       var points = []
       this.each(function (point) {
