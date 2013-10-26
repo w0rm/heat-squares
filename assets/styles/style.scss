@@ -1,0 +1,30 @@
+@import 'lib/base';
+@import 'compass/css3';
+
+$topbarHeight: 50px;
+
+#map {
+  position: absolute;
+  top: $topbarHeight;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.topbar {
+  height: $topbarHeight;
+  padding: 10px;
+  @include background(linear-gradient(#eee, #aaa));
+  @include text-shadow(1px 1px #fff);
+}
+
+.topbar-title {
+  font: bold 20px/30px Georgia, Serif;
+  color: #222;
+  float: left;
+  margin-right: 40px;
+}
+
+.topbar-subtitle {
+  font: 14px/30px Sans-serif
+}
