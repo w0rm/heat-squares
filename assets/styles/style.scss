@@ -2,6 +2,7 @@
 @import 'compass/css3';
 
 $topbarHeight: 50px;
+$topbarColor: #666;
 
 #map {
   position: absolute;
@@ -9,13 +10,18 @@ $topbarHeight: 50px;
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 
 .topbar {
+  position: relative;
+  z-index: 2;
   height: $topbarHeight;
   padding: 10px;
-  @include background(linear-gradient(#eee, #aaa));
-  @include text-shadow(1px 1px #fff);
+  border-top: 1px solid lighten($topbarColor, 90%);
+  //@include background(linear-gradient(lighten($topbarColor, 50%), $topbarColor));
+  //@include text-shadow(0 1px rgba(255,255,255,.3));
+  @include box-shadow(0 5px 5px rgba(0,0,0,.3))
 }
 
 .topbar-title {
@@ -23,6 +29,16 @@ $topbarHeight: 50px;
   color: #222;
   float: left;
   margin-right: 40px;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    width: 1px;
+    height: 30px;
+    background: #ccc
+  }
 }
 
 .topbar-subtitle {

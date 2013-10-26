@@ -58,23 +58,30 @@ body, html {
   height: 100%;
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 #map {
   position: absolute;
   top: 50px;
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 
 .topbar {
+  position: relative;
+  z-index: 2;
   height: 50px;
   padding: 10px;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #aaaaaa));
-  background: -webkit-linear-gradient(#eeeeee, #aaaaaa);
-  background: -moz-linear-gradient(#eeeeee, #aaaaaa);
-  background: -o-linear-gradient(#eeeeee, #aaaaaa);
-  background: linear-gradient(#eeeeee, #aaaaaa);
-  text-shadow: 1px 1px white;
+  border-top: 1px solid white;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .topbar-title {
@@ -82,6 +89,16 @@ body, html {
   color: #222;
   float: left;
   margin-right: 40px;
+  position: relative;
+}
+.topbar-title:after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  margin-left: 10px;
+  width: 1px;
+  height: 30px;
+  background: #cccccc;
 }
 
 .topbar-subtitle {
