@@ -9,6 +9,18 @@ class HeatSquares::App < Sinatra::Base
 
   get "/data" do
     content_type :json
-    HeatSquares::Scraper.run.to_json
+
+    result = HeatSquares::Cache.get
+
+    redirect "/cache" if result.nil?
+
+    result
+  end
+
+  get "/cache" do
+    result = HeatSquares::Scraper.run.to_json
+    HeatSquares::Cache.refresh(result)
+
+    redirect "/data"
   end
 end

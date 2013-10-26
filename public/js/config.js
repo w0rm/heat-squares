@@ -2,7 +2,7 @@ define([ 'async!http://maps.google.com/maps/api/js?v=3.exp&sensor=false&librarie
        , function () {
 
   return {
-    dataUrl: '/test.json'
+    dataUrl: '/data'
   , heatGradient: [
       'rgba(255,255,255,0)'
     , '#5d0200'

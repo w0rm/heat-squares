@@ -6,6 +6,7 @@ module HeatSquares::Scraper
     results = HeatSquares::Scraper.scanner
 
     {
+      :datepoint => Time.now.to_i,
       :amount => results.count,
       :spots => results
     }
