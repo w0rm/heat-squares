@@ -1,5 +1,5 @@
 module HeatSquares::Cache
-  CACHE_PATH = "#{File.dirname(__FILE__)}/../../../tmp/results.json"
+  CACHE_PATH = "#{File.dirname(__FILE__)}/../../../cache/results.json"
 
   puts "XXX: CACHE_PATH: #{CACHE_PATH}"
 
