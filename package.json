@@ -1,0 +1,14 @@
+{
+  "name": "heat-squares",
+  "private": true,
+  "version": "0.0.0",
+  "repository": "https://github.com/w0rm/heat-squares.git",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-concurrent": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.5.0"
+  }
+}
