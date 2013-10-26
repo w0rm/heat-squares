@@ -15,18 +15,18 @@ module HeatSquares::Scraper
   def self.venues(lat, lng, radius)
     puts "XXX: searching venues in: #{lat}, #{lng} (#{radius})"
     results =
-      HeatSquares::Scraper.client.search_venues_by_tip(
+      HeatSquares::Scraper.client.search_venues(
         :ll => "#{lat},#{lng}",
         :query => "coffee",
         :radius => radius
       )
 
-    results.map do |venue|
+    results.groups.first.items.map do |venue|
       {
         :id => venue.id,
         :lat => venue.location.lat,
         :lng => venue.location.lng,
-        :amount => venue.herenow
+        :amount => venue.stats.usersCount
       }
     end
   end

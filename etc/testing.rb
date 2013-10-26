@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/../back/lib/heat_squares"
+require "#{File.dirname(__FILE__)}/back/lib/heat_squares"
 puts "XXX: #{ENV["foursquare_client_secret"]}"
 results =
       HeatSquares::Scraper.client.search_venues_by_tip(
