@@ -1,6 +1,13 @@
 foursquare:
   client_id: H1MC1HPDMFW3J5P1LIQCSNFAWEQSNL5HZNU530N4HTH5NLLX
 
-center_coordinates:
-  lat: "52.51831"
-  lng: "13.404985"
+scanner:
+  steps: 4
+  radius: 1250
+  area:
+    left_top:
+      lat: 52.537735
+      lng: 13.336518
+    right_bottom:
+      lat: 52.467933
+      lng: 13.448785

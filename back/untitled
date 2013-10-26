@@ -1,0 +1,6 @@
+results =
+      HeatSquares::Scraper.client.explore_venues(
+        :ll => "52.530008,13.382708",
+        :section => "coffee",
+        :radius => 100
+      )

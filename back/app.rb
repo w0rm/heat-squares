@@ -9,6 +9,6 @@ class HeatSquares::App < Sinatra::Base
 
   get "/data" do
     content_type :json
-    HeatSquares::Scraper.scrap.to_json
+    HeatSquares::Scraper.run.to_json
   end
 end
