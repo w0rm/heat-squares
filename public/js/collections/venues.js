@@ -1,9 +1,9 @@
-define( ['backbone', 'models/venue', 'underscore']
-      , function (Backbone, Venue, _) {
+define( ['backbone', 'models/venue', 'underscore', 'config']
+      , function (Backbone, Venue, _, config) {
 
   return Backbone.Collection.extend({
     model: Venue
-  , url: '/test.json'
+  , url: config.dataUrl
   , getPoints: function () {
       var points = []
       this.each(function (point) {

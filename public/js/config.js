@@ -2,10 +2,21 @@ define([ 'async!http://maps.google.com/maps/api/js?v=3.exp&sensor=false&librarie
        , function () {
 
   return {
-    mapOptions: {
+    dataUrl: '/test.json'
+  , heatGradient: [
+      'rgba(255,255,255,0)'
+    , '#5d0200'
+    , '#873900'
+    , '#be6113'
+    , '#c88729'
+    , '#cd942d'
+    , '#f2a74c'
+    , '#d0ad4f'
+    , '#ffeeaa'
+    ]
+  , mapOptions: {
       zoom: 13
     , center: new google.maps.LatLng(52.51831, 13.404985)
-    //, mapTypeId: google.maps.MapTypeId.SATELLITE
     , panControl: false
     , zoomControl: true
     , zoomControlOptions: {

@@ -21,6 +21,7 @@ define([ 'backbone'
       this.heatmap = new google.maps.visualization.HeatmapLayer({data: this.heatPointArray})
       this.heatmap.setOptions({ radius: 100
                               , opacity: 0.6
+                              , gradient: config.heatGradient
                               })
       this.heatmap.setMap(this.map)
     }
